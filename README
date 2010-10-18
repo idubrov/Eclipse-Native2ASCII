@@ -1,0 +1,10 @@
+This project is a simple workaround for the bug 65571 of Eclipse properties file editor.
+
+To build the extension, execute "mvn package" (Apache Maven2 is required, http://maven.apache.org)
+
+To use this extension, simply put the binary JAR into the <JDK_HOME>/jre/lib/ext directory,
+run the Eclipse, open the Window->Preferences dialog, navigate to General->Content Types,
+select "Java Properties File" node under "Text" node on the right, and change the default
+encoding to "ISO-8859-1-ESCAPED". After that, the properties files with unicode escapes
+will be displayed in "native" form in the properties file editor and converted to the
+escaped form automatically upon save.
